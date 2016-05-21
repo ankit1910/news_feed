@@ -1,0 +1,32 @@
+<div class='well bs-component bg-light-div col-lg-10'>
+  <h1><u>NDTV News - Top Stories</u></h1>
+
+  <% @news_feeds.each do |news_feed| %>
+    <div class="row mart30">
+      <div class="news_feed">
+        <h3><u> <%= link_to news_feed.title, news_feed.link %></u></h3>
+        <b>Posted On:</b> <%= news_feed.published_at.to_s(:long) %>
+        <div>
+          <%= news_feed.description.html_safe %>
+        </div>
+      </div>
+      <h3>Comments</h3>
+      <div class="well comments mart10">
+        <div>
+          <%= render 'comments', news_feed: news_feed %>
+        </div>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+</div>
+<!-- Sample Form -->
+<div class="hide">
+  <%= form_tag comments_path, class: 'comment_form' do %>
+    <%= text_field_tag :title, '',required: true %>
+    <%= hidden_field_tag :commentable_type %>
+    <%= hidden_field_tag :commentable_id %>
+    <%= hidden_field_tag :anchor_value %>
+    <%= submit_tag 'Add' %>
+  <% end %>
+<div>

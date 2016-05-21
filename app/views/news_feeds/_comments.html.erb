@@ -1,0 +1,20 @@
+<div data-container="comments">
+  <ul id="news_feed_<%= news_feed.id %>">
+    <% news_feed.comments.each do |comment| %>
+      <li>
+        <div data-container="replies">
+          <b><%= comment.title %></b>
+          <%= link_to 'Add Reply', '#', class: 'add_comment pull-right', data: { commentable_type: 'Comment', commentable_id: comment.id, add_to: 'replies', anchor: "news_feed_#{ news_feed.id }" } if user_signed_in? %>
+          <ul>
+            <% comment.replies.each do |reply| %>
+              <li><%= reply.title %></li>
+            <% end %>
+          </ul>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Add Comment', '#', class: 'add_comment', data: { commentable_type: 'NewsFeed', commentable_id: news_feed.id, add_to: 'comments', anchor: "news_feed_#{ news_feed.id }" } if user_signed_in? %>
+</div>
+
