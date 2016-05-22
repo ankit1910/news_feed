@@ -7,7 +7,6 @@ NewsFeed.prototype.bindEvents = function () {
   this.addCommentButtonsHandler();
 };
 
-
 NewsFeed.prototype.addCommentButtonsHandler = function () {
   var _this = this;
   this.addCommentButtons.on('click', function(e) {

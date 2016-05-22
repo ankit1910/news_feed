@@ -7,10 +7,32 @@
   */
 
 
+.mart5 {
+  margin-top: 5px;
+}
+.marl5 {
+  margin-left: 5px;
+}
+
 .mart10 {
   margin-top: 10px;
 }
+.mart20 {
+  margin-top: 20px;
+}
 
-.mart30 {
-  margin-top: 30px;
+.navbar-inverse {
+  background-color: #428bca;
+  border-color: #428bca;
+}
+
+div .comments {
+  background-color: #fff;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav>li>a {
+  font-size: 24px;
+  color: #000;
+  font-weight: bolder;
 }

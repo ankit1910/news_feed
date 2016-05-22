@@ -1,28 +1,12 @@
-== README
+Rails Application Setup Procedure (System should have ruby installed).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Starting Backend Application:
+  1) In a terminal go to `news` folder and run the following commands.
+    a) `bundle install`
+      It will install all the gems required by the system.
+    b) `bundle exec rake db:setup`
+      It will create the database schema and seed a user in the system.
+      email: 'user@news.com', password: 'password'
+    c) `bundle exec rails server`
+      It will start the server (rails application) on port 3000
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

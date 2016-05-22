@@ -31,11 +31,11 @@
 
     <div class="row">
       <div class="col-lg-10 mart10">
-        <%= f.submit "Log in", class: 'btn btn-primary' %>
+        <%= render "devise/shared/links" %>
       </div>
 
       <div class="col-lg-1 mart10">
-        <%= render "devise/shared/links" %>
+        <%= f.submit "Log in", class: 'btn btn-primary' %>
       </div>
     </div>
   <% end %>

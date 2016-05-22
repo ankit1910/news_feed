@@ -1,5 +1,5 @@
-<div data-container="comments">
-  <ul id="news_feed_<%= news_feed.id %>">
+<div class="well comments" data-container="comments">
+  <ul>
     <% news_feed.comments.each do |comment| %>
       <li>
         <div data-container="replies">
@@ -12,6 +12,7 @@
           </ul>
         </div>
       </li>
+      <hr>
     <% end %>
   </ul>
 

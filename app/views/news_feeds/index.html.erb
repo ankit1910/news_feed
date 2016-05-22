@@ -1,21 +1,17 @@
-<div class='well bs-component bg-light-div col-lg-10'>
-  <h1><u>NDTV News - Top Stories</u></h1>
+<div class='well bs-component bg-light-div'>
+  <h1 class="heading"><u>NDTV News - Top Stories</u></h1>
 
   <% @news_feeds.each do |news_feed| %>
-    <div class="row mart30">
+    <div id="news_feed_<%= news_feed.id %>" class="row mart20 marl5">
       <div class="news_feed">
-        <h3><u> <%= link_to news_feed.title, news_feed.link %></u></h3>
+        <h3 class="title"><u> <%= link_to news_feed.title, news_feed.link %></u></h3>
         <b>Posted On:</b> <%= news_feed.published_at.to_s(:long) %>
         <div>
           <%= news_feed.description.html_safe %>
         </div>
       </div>
       <h3>Comments</h3>
-      <div class="well comments mart10">
-        <div>
-          <%= render 'comments', news_feed: news_feed %>
-        </div>
-      </div>
+      <%= render 'comments', news_feed: news_feed %>
     </div>
     <hr>
   <% end %>

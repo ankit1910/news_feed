@@ -6,3 +6,8 @@
 body {
   font-size: 16px;
 }
+
+.heading {
+  text-align: center;
+  font-weight: bolder;
+}

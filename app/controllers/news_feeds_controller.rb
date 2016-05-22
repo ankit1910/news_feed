@@ -10,9 +10,9 @@ class NewsFeedsController < ApplicationController
   private
     def fetch_news_feeds
       begin
-        # NewsFeedService.call
+        NewsFeedService.call
       rescue Exception => e
-        flash[:alert] = "sdcasd"
+        flash[:alert] = "Something went wrong, Please check your network connection."
       end
     end
 end

@@ -7,9 +7,9 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="full-container">
+    <div class="container">
       <%= render 'layouts/top_navigation' %>
-      <%= render 'layouts/flash_helper' %>
+      <%= bootstrap_flash %>
       <%= yield %>
     </div>
   </body>

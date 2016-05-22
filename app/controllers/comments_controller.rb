@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if comment.save
       flash[:notice] = "Comment Saved Successfully"
     else
-      flash[:error] = "Comment Creation Failed."
+      flash[:alert] = "Comment Creation Failed."
     end
     redirect_to news_feeds_path(anchor: params[:anchor_value])
   end
