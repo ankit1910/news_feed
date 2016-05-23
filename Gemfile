@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 gem 'rails',                    '4.2.6'
 
-gem 'sqlite3',                  '~> 1.3.11'
+gem 'pg',                       '~> 0.18.4'
 gem 'uglifier',                 '>= 1.3.0'
 gem 'therubyracer',             '~> 0.12.2', platforms: :ruby
 gem 'jquery-rails',             '~> 4.1.1'
